@@ -14,11 +14,11 @@ Visitor Kodyak("Kodyak");
 int main()
 {
 	string Library_name, answer;
-	cout << "Welcome to a Library Model v. 1.0" << endl;
-	cout << "Please, name your Library" << endl;
+	cout << " Welcome to a Library Model v. 1.0" << endl;
+	cout << " Please, name your Library" << endl;
 	cin >> Library_name;
 	Library Blackstone(Library_name), * libpointer = &Blackstone;
-	cout << "Congratulations, you made your own Library named " << Blackstone.Library_name << endl << "For now it doesn't have any books." << endl << endl;
+	cout << " Congratulations, you made your own Library named " << Blackstone.Library_name << endl << " For now it doesn't have any books." << endl << endl;
 
 	cout << " There are two people in your Library: the Librarian " << Walhalla.getName() << " and the Visitor " << Kodyak.getName() << endl;
 	Walhalla.Access_to_DB();
