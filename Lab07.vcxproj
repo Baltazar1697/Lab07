@@ -149,6 +149,7 @@
     <ClInclude Include="Book.h" />
     <ClInclude Include="Librarian.h" />
     <ClInclude Include="Library.h" />
+    <ClInclude Include="ReadingRoom.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="Visitor.h" />
   </ItemGroup>

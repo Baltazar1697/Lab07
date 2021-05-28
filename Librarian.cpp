@@ -22,7 +22,7 @@ void Librarian::Access_to_DB()									// Polymorhed function
 
 void Librarian::Add_Book(Book* b, Library* L)					// Librarian special function to add books in Library storage
 {
-	L->Book_Storage.push_back(b);
+	L->readingroom.Book_Storage.push_back(b);
 	cout << " Book named " << b->Book_name << " was added to the Library" << endl;
 
 }
@@ -31,10 +31,10 @@ void Librarian::Delete_Book(Book* b, Library* L)				// Librarian speacial functi
 {
 	int i = 0;
 	Book* t;
-	while (i != L->Book_Storage.size()) {						// Just look for book in storage in loop
-		t = L->Book_Storage[i];
+	while (i != L->readingroom.Book_Storage.size()) {						// Just look for book in storage in loop
+		t = L->readingroom.Book_Storage[i];
 		if (t == b) {
-			L->Book_Storage.erase(L->Book_Storage.begin() + i); // And simply erase/remove it from Library storage
+			L->readingroom.Book_Storage.erase(L->readingroom.Book_Storage.begin() + i); // And simply erase/remove it from Library storage
 			cout << "The book named " << t->Book_name << " was removed from the Library." << endl;
 		}
 		else {

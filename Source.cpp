@@ -29,21 +29,21 @@ int main()
 	Blackstone.list_Storage();
 
 	cout << " Walhalla decided to remove one of these books from his Library. He removes the book number... ";
-	int temp = prg(Blackstone.Book_Storage.size());
+	int temp = prg(Blackstone.readingroom.Book_Storage.size());
 
 	cout << temp << endl << endl;
 
-	Walhalla.Delete_Book(Blackstone.Book_Storage[temp], libpointer);
+	Walhalla.Delete_Book(Blackstone.readingroom.Book_Storage[temp], libpointer);
 
 	Blackstone.list_Storage();
 
 	cout << endl << " Let's see what " << Kodyak.getName() << " can do..." << endl << endl;
 	Kodyak.Access_to_DB();
 
-	temp = prg(Blackstone.Book_Storage.size());
+	temp = prg(Blackstone.readingroom.Book_Storage.size());
 
 	cout << " Kodyak decided to take book. Let it be the book number..." << temp << endl << endl;
-	Kodyak.Take_book(Blackstone.Book_Storage[temp], libpointer);
+	Kodyak.Take_book(Blackstone.readingroom.Book_Storage[temp], libpointer);
 
 	cout << " One eternity later Kodyak completed reading his book and he gives it back to a Library." << endl;
 	Kodyak.Return_book(libpointer);

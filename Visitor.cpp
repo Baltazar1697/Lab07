@@ -27,10 +27,10 @@ void Visitor::Take_book(Book* b, Library* L)                        // Main fucn
         cout << " You have taken the book named " << b->Book_name << " " << b->Genre << endl;
         int i = 0;
         Book* t;
-        while (i != L->Book_Storage.size()) {                       // In the loop he searches for this book
-            t = L->Book_Storage[i];
+        while (i != L->readingroom.Book_Storage.size()) {                       // In the loop he searches for this book
+            t = L->readingroom.Book_Storage[i];
             if (t == b) {
-                L->Book_Storage.erase(L->Book_Storage.begin() + i); // And remove it from the library storage
+                L->readingroom.Book_Storage.erase(L->readingroom.Book_Storage.begin() + i); // And remove it from the library storage
             }
             else {
                 i++;
@@ -42,7 +42,7 @@ void Visitor::Take_book(Book* b, Library* L)                        // Main fucn
 void Visitor::Return_book(Library* L)                               //Function for Returning book
 {
     if (Owned_book != nullptr) {
-        L->Book_Storage.push_back(Owned_book);                      //Pushing the book to the library storage
+        L->readingroom.Book_Storage.push_back(Owned_book);                      //Pushing the book to the library storage
         cout << "You have returned the book named " << Owned_book->Book_name << " " << Owned_book->Genre << endl;
         Owned_book = nullptr;                                       // Remove it from visitor
 
