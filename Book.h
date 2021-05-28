@@ -11,6 +11,7 @@ public:
 	friend bool operator==(Book b1, Book b2);
 	Book();
 	Book(string name, string genre);
+	void ReadBook();
 	~Book() {};
 	string Genre;
 };

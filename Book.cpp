@@ -37,3 +37,8 @@ Book::Book(string name, string genre)				// Constructor with arguments
 	this->Book_name = name;
 	this->Genre = genre;
 }
+
+void Book::ReadBook()
+{
+	cout << " Someone just read this book named " << this->Book_name;
+}
